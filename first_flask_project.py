@@ -28,11 +28,17 @@ def autumn():
 def celebrity():
     return render_template('celebrity.html')
 
+#登录的视图函数，在这块，我们服务器将会有两种被请求方式
 @app.route('/login/',methods=['GET','POST'])
 def login():
+    #请求方式为GET时
     if request.method=='GET':
         return render_template('login.html')
+    #请求方式为POST时
     else:
+        #首先将我们从前端网页获取的数据与原有数据库进行比对
+        #如果有相同内容，那我们储存session信息，并返回主页面
+        #为什么是储存session，这个与flask框架有关，这这里可以粗略地理解，cookie信息就是是加密后的session
         phonenumber = request.form.get('phonenumber')
         password = request.form.get('password')
         user = User.query.filter(User.phonenumber == phonenumber,User.password == password).first()
@@ -44,6 +50,9 @@ def login():
         else:
            return u'手机号码或者密码错误，请确认后在登录'
 
+#注册视图函数
+#注意一点就是，我们在完成需要注册和登录功能的的页面是，一般是先写注册功能，在写登录功能
+#因为登录需要数据库数据，我们不将数据存入，那永远登录失败
 @app.route('/registered/',methods=['GET','POST'])
 def registered():
     if request.method == 'GET':
