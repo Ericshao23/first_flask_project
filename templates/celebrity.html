@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+风流人物
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for('static',filename="image/bgrenwen.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+    #img1{
+    		 margin-top:10px;
+    		 width: 350px;
+    		 height: 350px;
+             border-radius: 200px;
+             position:absolute;
+             left:300px;
+             top:100px;
+             opacity:0.5;
+    }
+    #img2{
+    		 margin-top:10px;
+    		 width: 350px;
+    		 height: 350px;
+             border-radius: 200px;
+             position:absolute;
+             left:655px;
+             top:160px;
+             opacity:0.5;
+    }
+
+	#div{
+			 position:absolute;
+        	 top:600px;
+         	 width:100%;
+	}
+{% endblock %}
+{% block body %}
+        <a href="{{ url_for('yan') }}"><img src="{{ url_for('static',filename='image/yan.jpg') }}" id="img1"/></a>
+		<a href="{{ url_for('yang') }}"><img src="{{ url_for('static',filename='image/yang1.jpg') }}" id="img2"/></a>
+{% endblock %}

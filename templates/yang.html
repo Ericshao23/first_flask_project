@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}
+杨贵妃传
+{% endblock %}
+{% block style %}
+			body{
+            background-image: url({{ url_for("static",filename="image/bgrenwen.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	  #li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	  }
+
+    #img{
+    margin-top:10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    }
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:left;
+    }
+{% endblock %}
+{% block body %}
+			<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('yan') }}">颜真卿</a></li>
+					<li id="li2"><a href="{{ url_for('yang') }}">杨贵妃</a></li>
+				</ul>
+			</div>
+
+<div class="div">
+
+<img src="{{ url_for('static',filename='image/yang1.jpg') }}" id="img" />
+<h1>&nbsp;&nbsp;杨贵妃</h1>
+<p>&nbsp;&nbsp;From(xdms.dywz.cn)</p>
+
+<h2>&nbsp;&nbsp;&nbsp;中国古代四大美女之一</h2>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;杨玉环（公元719年6月22日－公元756年7月15日），号太真。  姿质丰艳，善歌舞，通音律，唐代宫廷音乐家、舞蹈家。她的音乐才华在历代后妃中鲜见，是中国古代四大美女之一。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;她出生于宦门世家，父亲杨玄琰曾担任过蜀州司户。
+她先为唐玄宗儿子寿王李瑁王妃，受令出家后，又被唐玄宗李隆基册封为贵妃。天宝十五载（756年），安禄山发动叛乱，随李隆基从延秋门出长安，流亡蜀中，途经马嵬驿，杨玉环于六月十四日（公历7月15日），在马嵬驿死于乱军之中。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;杜甫有《哀江头》诗：“明眸皓齿今何在，血污游魂归不得。清渭东流剑阁深，去住彼此无消息。人生有情泪沾臆，江花江草岂终极！”、白居易形容她“温泉水滑洗凝脂”、“回眸一笑百媚生，六宫粉黛无颜色”。李白的《清平调》则说她"云想衣裳花想容,春风拂槛露华浓。“<br/></p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yang2.jpg') }}" width="600px" />
+  <pre><ins>杨贵妃图</ins></pre>
+</div>
+<h2>&nbsp;&nbsp;&nbsp;贵妃得宠</h2>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;玄宗亲谱《霓裳羽衣曲》，召见杨贵妃时，令乐工奏此新乐，赐杨氏以金钗钿合，并亲自插在杨氏鬓发上。玄宗对后宫人说：“朕得杨贵妃，如得至宝也”（《古今宫闱秘记》卷三）复制新曲《得宝子》，足见宠幸之隆。时宫中未立新皇后
+玉环与鹦鹉
+玉环与鹦鹉
+，宫人皆呼杨氏为“娘子”，实居后位。郑处诲讲了一个故事，说在杨玉环晋为贵妃之后，岭南贡上一只白鹦鹉，能模仿人语，玄宗和杨贵妃十分喜欢，称它为“雪花女”，宫中左右则称它为“雪花娘”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;唐玄宗令词臣教以诗篇，数遍之后，这只白鹦鹉就能吟颂出来，逗人喜爱。玄宗每与杨贵妃下棋，如果局面对玄宗不利，侍从的宦官怕玄宗输了棋，就叫声“雪衣娘”，这只鹦鹉便飞入棋盘，张翼拍翅。 后来这只可爱的“雪衣娘”被老鹰啄死，玄宗与杨贵妃十分伤心，将它葬于御苑中，称为“鹦鹉冢”。玄宗对宠物白鹦鹉尚且如此珍惜，其对杨贵妃的厚宠更不待言了。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yang1.jpg') }}" width="600px" />
+  <pre><ins>杨贵妃图</ins></pre>
+</div>
+<h2>&nbsp;&nbsp;&nbsp;杨家得势</h2>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;杨贵妃其大姐封为韩国夫人，三姐封为虢国夫人，八姐封为秦国夫人 [10]  。每月各赠脂粉费十万钱。虢国夫人排行第三，以天生丽质自美，不假脂粉。张祜《集灵台二首·其二》诗讽之：“虢国夫人承主恩，平明骑马入宫门。却嫌脂粉污颜色，淡扫蛾眉朝至尊。”<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;由于杨贵妃得到重宠，她的兄弟均赠高官，甚至远房兄弟杨钊，原为市井无赖，因善计筹，玄宗与杨氏诸姐妹赌博，令杨钊计算赌账，赐名国忠，身兼支部郎中等十余职，操纵朝政。玄宗游幸华清池，以杨氏五家为扈从，每家一队，穿一色衣，五家合队，五彩缤纷。沿途掉落首饰遍地，闪闪生光，其奢侈无以复加。杨家一族，娶了两位公主，两位郡主，玄宗还亲为杨氏御撰和彻书家庙碑。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yang4.jpg') }}" width="600px" />
+  <pre><ins>杨贵妃图</ins></pre>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;杨玉环善歌舞，通音律，为唐代宫廷音乐家、舞蹈家，其音
+乐才华在历代后妃中鲜见，被后世誉为中国古代四大美女之一。虽然体态丰腴，但史书上也记载着她是一位舞蹈高手，还精通胡旋舞，身段飘摇，翻跃如风，令人眼花缭乱。杨玉环自入宫以后，遵循封建的宫廷体制，不过问朝廷政治，不插手权力之争，以自已的妩媚温顺及过人的音乐才华，受到玄宗的百般宠爱，虽曾因妒而触怒玄宗，以致两次被送出宫，但最终玄宗还是难以割舍。杨玉环若生在别的年代，或许成不了杨贵妃。唐朝人以丰腴为美，杨玉环则“凝脂胭华”，连“脂肪”都开始“凝集”，像“胭脂”一样散发着“华丽”的色彩，这都是是需要一定“功力”的。。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;后世之人以成语“环肥燕瘦”而附会，认为杨贵妃体态较胖(BMI25)，而当时的画作描绘的宫延贵族女性也是身材丰满。诗人李白曾经与贵妃近距离接触，并为贵妃现场作诗，即为著名的《清平调》，其诗赞美贵妃的身形和美貌曰:“一枝红艳露凝香，云雨巫山枉断肠。借问汉宫谁得似，可怜飞燕倚新妆。”而且根据历史记载，贵妃擅长舞蹈，其代表舞即为著名的“霓裳羽衣曲”，其舞蹈水平也常被人与赵飞燕相比较，贵妃还十分擅长于胡旋舞。
+
+杜甫有《哀江头》诗：“明眸皓齿今何在，血污游魂归不得。清渭东流剑阁深，去住彼此无消息。人生有情泪沾臆，江花江草岂终极！”。白居易在《长恨歌》中用“回眸一笑百媚生，六宫粉黛无颜色”来形容她的倾国之貌、用“温泉水滑洗凝脂”描写贵妃皮肤的嫩滑白净。</p>
+</div>
+{% endblock %}

@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block style %}
+	body{
+            background-image:url({{ url_for("static",filename="image/index.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+    #div1{
+		position:absolute;
+        left:400px;
+        top:-400px;
+		margin:500px 100px;
+		width:500px;
+        height:150px;
+        float: left;
+	}
+
+    #img1{
+		position:absolute;
+        left:300px;
+        top:99px;
+        opacity:0.8;
+
+	}
+
+	#div2{
+		position:absolute;
+        left:400px;
+        top:-230px;
+		margin:500px 100px;
+		width:500px;
+        height:150px;
+        float: left;
+	}
+
+	 #img2{
+		position:absolute;
+        left:300px;
+        top:269px;
+        opacity:0.8;
+	}
+
+	#div3{
+		position:absolute;
+        left:400px;
+        top:-60px;
+		margin:500px 100px;
+		width:500px;
+        height:150px;
+        float: left;
+	}
+
+    #img3{
+		position:absolute;
+        left:300px;
+        top:440px;
+        opacity:0.8;
+	}
+
+    #div4{
+		position:absolute;
+        top:600px;
+        width:100%;
+	}
+
+    p {
+    	font-family: Monospace;
+    }
+
+{% endblock %}
+{% block body %}
+<!--主体部分 -->
+		<div>
+
+				<!--历史-->
+				<div>
+					<a href="{{ url_for('history') }}">
+					<img src="{{ url_for('static',filename='image/lishi.jpg') }}" width="150px" height="150px" id="img1">
+				    </a>
+					<a href="{{ url_for('history') }}">
+					<div style="background-color:rgba(255,225,255,0.4)" id="div1">
+						<p>&nbsp;&nbsp;&nbsp;“秦中自古帝王州”。<br/>
+						&nbsp;&nbsp;&nbsp;十三朝古都，三千载文明，篇篇佳句为长安咏唱，首首赞歌句句为长安流传，无数荡气回肠的故事曾在这里上演，无数感人至深的传说曾在这里发生<br/>
+					    &nbsp;&nbsp;&nbsp;一辈一辈的传承，一代一代的积淀，你是否会好奇发生在这片土地上的故事？你是否想了解埋藏在这片土地下的曾经？</p>
+					</div>
+				    </a>
+				</div>
+
+
+				<!--风景-->
+				<div>
+					<a href="{{ url_for('scenery') }}">
+					<img src="{{ url_for('static',filename='image/fengjing.jpg')}}" width="150px" height="150px" id="img2">
+				    </a>
+    				<a href="{{ url_for('scenery') }}">
+    				<div style="background-color:rgba(240,255,255,0.5)" id="div2">
+    					<p>&nbsp;&nbsp;&nbsp;“春为青阳，夏为朱明，秋为白藏，冬为玄英。四气和谓之玉烛。”<br/>
+    					&nbsp;&nbsp;&nbsp;“春为发生,夏为长嬴,秋为收成,冬为安宁。 四时和为通正,谓之景风。”<br/>
+    					&nbsp;&nbsp;&nbsp;春去秋来，四气更迭，四时的长安有四种风格迥异的姿态，春风暖暖、夏花灼灼、秋叶零零、冬雪飘飘，四时的长安却也同样弥漫着浓厚的诗意······</p>
+                    </div>
+				</div>
+
+
+				<!--人文-->
+				<div>
+					<a href="{{ url_for('celebrity') }}">
+					<img src="{{ url_for('static',filename='image/renwen.jpg')}}" width="150px" height="150px" id="img3">
+				    </a>
+    				<a href="{{ url_for('celebrity')}}">
+    				<div style="background-color:rgba(152,255,152,0.3)" id="div3">
+    				<p>&nbsp;&nbsp;&nbsp;滚滚长江东逝水，浪花淘尽多少英雄？<br/>
+					&nbsp;&nbsp;&nbsp;昔者，屈子辞云：“望美人兮天一方。”长安多美人。<br/>
+					&nbsp;&nbsp;&nbsp;美人者，仅谈如卫玠般“低头浅笑，如烟花醉”的人显然是片面的。长安有容貌姣然者，更有名将、大儒、卿相等更配得起美人二字的人。<br/>
+					&nbsp;&nbsp;&nbsp;让我们走进这些美人，了解这些美人，感受长安城的钟灵毓秀人杰地灵······<br/>
+					</p>
+    			    </div>
+    			    </a>
+				</div>
+
+		</div>
+{% endblock %}
+{% block title %}
+首页
+{% endblock %}

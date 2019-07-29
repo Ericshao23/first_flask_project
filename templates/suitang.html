@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% block title %}
+隋唐历史
+{% endblock %}
+{% block style %}
+	body{
+            background-image: url({{ url_for("static",filename="image/bgsuitang.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 120px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:120px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:585px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:left;
+    }
+{% endblock %}
+{% block body %}
+
+    <div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('qinhan') }}">先秦两汉</a></li>
+                    <li id="li2"><a href="{{ url_for('weijin') }}">魏晋南北朝</a></li>
+                     <li id="li2"><a href="{{ url_for('suitang') }}">隋唐五代</a></li>
+                    <li id="li2"><a href="{{ url_for('songyuan') }}">宋元明清</a></li>
+				</ul>
+			</div>
+
+<div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隋唐五代</h1>
+<hr/>
+	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隋</h1>
+	<hr>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;581年二月，北周静帝禅让帝位于杨坚，北周覆亡。杨坚定国号为“隋”。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;隋最初定都在汉长安城，但当时的汉长安历经长期战乱，年久失修，破败狭小，污染严重，于是隋文帝令宇文恺主持规划建设大兴城并定都于此。
+</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/suitang1.jpg') }}" >
+<pre><ins>隋疆域图</ins></pre>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;大兴城的面积达84平方公里，主要由建筑学家宇文恺主持规划建设，先造大兴宫城，后造皇城。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;开皇三年（583年）在城西侧开挖龙首渠、永安渠和清明渠，引浐水、交水、潞水，直通宫城。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;第二年，由大兴城东凿300余里至潼关，名为广通渠，引渭水注入渠中使漕运直通黄河。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;605年，隋炀帝杨广即位，同年，建通济渠运河，自大兴至江都（今扬州）。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;608年，又兴建永济渠运河。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;大业九年（613年）又动用10万余人修筑大兴城外郭城，大兴城的总体格局至此形成。<br>
+</p>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;唐</h1>
+<hr>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;618年，李渊称帝，建立唐朝，改大兴为长安，此后进一步修建和完善。
+</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/suitang2.jpg') }}" >
+<pre><ins>唐长安城平面图</ins></pre>
+</div>
+<h2>&nbsp;&nbsp;&nbsp;唐太宗</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;修建大明宫。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/suitang3.jpg') }}" width="585px"/>
+<pre><ins>唐大明宫鸟瞰图</ins></pre>
+</div>
+<h2>&nbsp;&nbsp;&nbsp;唐玄宗</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;修建兴庆宫。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/suitang4.jpg') }}" width="585px"/>
+<pre><ins>兴庆宫</ins></pre>
+</div>
+<hr/>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;唐长安城规模宏伟，布局严谨，结构对称，排列整齐。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;外城四面各有三个城门，贯通十二座城门的六条大街是全城的交通干道。而纵贯南北的朱雀大街则是一条标准的中轴线，它衔接宫城的承天门、皇城的朱雀门和外城的明德门，把长安城分成了东西对称的两部分，东部是万年县，西部是长安县，东、西两部各有一个商业区，称为东市和西市。城内南北11条大街，东西14条大街，把居民住宅区划分成了整整齐齐的110坊，其形状近似一个围棋盘。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;城周长达35.56公里，面积约87.27平方公里，是如今西安城墙内面积的9.7倍，西汉长安城的2.4倍，元大都的1.7倍，明清北京城的1.4倍，公元447年所修君士坦丁堡的7倍，公元800年所修巴格达的6．2倍，古代罗马城的7倍。至盛唐，长安为当时规模最大、最为繁华的国际都市。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;唐长安城的形制是中国古代城市、尤其是都城建设的典范，在当时也影响了邻近国家的都城建设。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;日本国的平城京和平安京、渤海国上京龙泉府都高度效仿了长安城的规划结构。<br>
+</p>
+<hr/>
+<hr/>
+
+</div>
+{% endblock %}

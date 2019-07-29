@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    {% endblock %}</title>
+    <style>
+        {% block style %}
+        {% endblock %}
+    ul {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+
+	li {
+    		float: left;
+		}
+
+	li a {
+   			display: block;
+    		color: white;
+    		text-align: center;
+    	    padding: 14px 16px;
+    		text-decoration: none;
+	    }
+    li a:hover {
+   			 background-color: #000;
+		}
+
+    </style>
+</head>
+<body>
+    		<!-- 页头部分 -->
+		<div>
+			<!-- 小图标 -->
+			<ul>
+
+                <li><span class="glyphicons glyphicons-government"><img src="{{ url_for('static',filename='image/changan.png') }}" alt=""  width="50px" height="50px"></span></li>
+                <!-- 三个链接区以及登录链接 -->
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="{{ url_for('history') }}">闻之美名</a></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="{{ url_for('scenery') }}">见诸美景</a></li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                <li><a href="{{ url_for('celebrity') }}">思乎美人</a></li>
+                {% if user %}
+                     <li style="float:right"><a href="{{ url_for('logout') }}">注销</a></li>
+                    <li style="float: right"><a href="#">{{ user.username }}</a></li>
+
+
+                {% else %}
+                <li style="float: right"><a href="{{ url_for('login') }}">登录/注册</a></li>
+                {% endif %}
+
+			</ul>
+		</div>
+		<!-- 页尾简介 -->
+		<div id="div4">
+			<hr/>
+			<p style="text-align:center">cnpll</p>
+		</div>
+{% block body %}
+{% endblock %}
+</body>
+</html>

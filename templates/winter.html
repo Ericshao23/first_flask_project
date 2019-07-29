@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% block title %}
+冬日景色
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgwinter.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:center;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('spring') }}">春为青阳</a></li>
+					<li id="li2"><a href="{{ url_for('summer') }}">夏为朱明</a></li>
+					<li id="li2"><a href="{{url_for('autumn') }}">秋为白藏</a></li>
+					<li id="li2"><a href="{{ url_for('winter') }}">冬为玄英</a></li>
+				</ul>
+			</div>
+    <div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;冬</h1>
+<hr/>
+<h3>江雪</h3>
+<h4>柳宗元</h4>
+<p>
+千山鸟飞绝，万径人踪灭。<br>
+孤舟蓑笠翁，独钓寒江雪。<br>
+</p>
+<img src="{{ url_for('static',filename='image/winter1.jpg') }}" width="600px">
+<br><br><br><br><br>
+<h3>梅花</h3>
+<h4>王安石</h4>
+<p>
+墙角数枝梅，凌寒独自开。<br>
+遥知不是雪，为有暗香来。<br>
+</p>
+<img src="{{ url_for('static',filename='image/winter2.jpg') }}" width="600px">
+<br><br><br><br><br>
+<h3>别董大二首</h3>
+<h4>高适</h4>
+<p>
+千里黄云白日曛，北风吹雁雪纷纷。<br>
+莫愁前路无知己，天下谁人不识君。<br>
+六翮飘飖私自怜，一离京洛十馀年。<br>
+丈夫贫践应未足，今日相逢无酒钱。<br>
+</p>
+<img src="{{ url_for('static',filename='image/winter3.jpg') }}" width="600px">
+<br><br><br><br><br>
+<h3>夜雪</h3>
+<h4>白居易</h4>
+<p>
+已讶衾枕冷，复见窗户明。<br>
+夜深知雪重，时闻折竹声。<br>
+</p>
+<img src="{{ url_for('static',filename='image/winter4.png') }}" width="600px">
+<br><br><br><br><br>
+<h3>早梅</h3>
+<h4>张渭</h4>
+<p>
+一树寒棒白玉条，迥临村路傍溪桥。<br>
+不知近水花先发，疑是经冬雪未销。<br>
+
+</p>
+<img src="{{ url_for('static',filename='image/winter5.jpg') }}" width="600px">
+    </div>
+{% endblock %}

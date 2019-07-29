@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block title %}
+魏晋历史
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgweijin.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 120px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:120px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:585px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:left;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('qinhan') }}">先秦两汉</a></li>
+					<li id="li2"><a href="{{ url_for('weijin') }}">魏晋南北朝</a></li>
+					<li id="li2"><a href="{{ url_for('suitang') }}">隋唐五代</a></li>
+					<li id="li2"><a href="{{ url_for('songyuan') }}">宋元明清</a></li>
+				</ul>
+			</div>
+    <div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;魏晋南北朝</h1>
+<hr/>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;公元8年腊月，王莽废汉孺子（刘婴）为安定公，改国号为新，建都常安。</p>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前赵</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;319年四月，汉主刘曜从粟邑返回长安，旧都平阳因战乱城室残破、陵庙无存，现实际上又为石勒所控，于是定都长安，刘曜称帝，改国号为赵。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/weijin1.jpg') }}" width="585px" />
+ <pre><ins>前赵后赵地图</ins></pre>
+</div>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前秦</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;352年，苻健称帝，定都长安。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/weijin2.jpg') }}" width="585px" />
+	<pre><ins>前秦疆域图</ins></pre>
+</div>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后秦</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;386年，姚苌称帝于长安，国号秦，史称后秦。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/weijin3.jpg') }}" width="585px" />
+	<pre><ins>后秦疆域图</ins> </pre>
+</div>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;西魏</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;535年，宇文泰拥立魏孝文帝的孙子元宝炬为帝，国号“大魏”与高欢所掌控的东魏、南梁对立，建都长安，史称西魏。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/weijin4.jpg') }}"/>
+	<pre><ins>南北朝梁、东魏、西魏</ins></pre>
+</div>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北周</h1>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;557年内，宇文觉废西魏恭帝自立，国号周，建都于长安，史称北周。</p>
+<div align="center">
+<img src="{{ url_for('static',filename='image/weijin5.jpg') }}"/>
+	<pre><ins>北周疆域图</ins></pre>
+</div>
+<hr/>
+<hr/>
+<blockquote>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;魏晋南北朝时中国历史经历社会大动荡、人口大迁移、民族大融合过程，战乱频仍，政权迭更，匈奴、鲜卑、羯、氐、羌等古代少数民族大量内迁关中。长安位于战乱中心，经济遭到严重破坏，但它以顽强的生命力在废墟上一再复苏，并凭借传统政治经济文化中心的巨大力量，成为中华民族的文明大熔炉。古代各少数民族在这里受到先进文明的熏陶，迅速迈进封建社会大门。以长安为中心的民族大融合为中华民族增添了生气勃勃的新鲜血液，也为迎来隋唐王朝中国封建社会辉煌的黄金时代创造了历史条件。</p>
+</blockquote>
+<hr/>
+<hr/>
+</div>
+
+{% endblock %}

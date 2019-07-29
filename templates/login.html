@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}
+登陆
+{% endblock %}
+{% block style %}
+     body{
+            background-image: url({{ url_for('static',filename="image/bgrenwen.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+        .login{
+            margin:200px 400px;
+            width:500px;
+            height:400px;
+            border-color:#AFEEFF;
+            border-style:solid;
+        }
+        .p1{
+            text-align:center;
+            font-size:45px;
+            font-weight:100;
+            color:#00BEEE;
+        }
+        .p2{
+            text-align:center;
+            font-size:20px;
+            font-weight:100;
+            color:#00BEEE;
+            display: inline;
+        }
+        .p3{
+            text-align:center;
+            font-size:16px;
+            font-weight:100;
+            color:#00BEEE;
+            display: inline;
+        }
+        .f1{
+            text-align:center;
+            font-weight:600;
+        }
+        .t1{
+            margin-left:25%;
+        }
+        .i1{
+            display:inline-block;
+            padding:5px 25px;
+            background-color:rgba(135,206,235,0.5);
+            border-style:none;
+
+        }
+
+        .pu1{
+            padding:5px 15px;
+        }
+        #a{
+            display:inline-block;
+            text-decoration:none;
+            color:white;
+            font-weight:500;
+            margin:80px 50px;
+        }
+{% endblock %}
+{% block body %}
+ <div class="login" style=" background-color:rgba(240,255,255,0.5)" >
+
+    <p class="p1">登&nbsp;&nbsp;录</p>
+
+    <form class="f1" name="input" action="" method="post">
+
+        <p class="p2">手机号：</p><input type="text" name="phonenumber" class="pu1" placeholder="用户名/手机号码"><br><br>
+        <p class="p2">密&nbsp;&nbsp;&nbsp;码：</p><input type="password" name="password" class="pu1" placeholder="密码">
+
+        <table class="t1">
+            <a href="{{ url_for('registered') }}" id="a"><p class="p3">我要注册 | 忘记密码？</p></a>
+            <button class="il">登录</button>
+        </table>
+
+    </form>
+{% endblock %}

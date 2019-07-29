@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% block title %}
+颜真卿传
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgrenwen.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	  #li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	  }
+
+    #img{
+    margin-top:10px;
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    }
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:left;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('yan') }}">颜真卿</a></li>
+					<li id="li2"><a href="{{ url_for('yang') }}">杨贵妃</a></li>
+				</ul>
+			</div>
+
+<div class="div">
+<img src="{{ url_for('static',filename='image/yan.jpg') }}" id="img" />
+<h1>&nbsp;&nbsp;颜真卿</h1>
+<p>&nbsp;&nbsp;From(xdms.dywz.cn)</p>
+<h2>&nbsp;&nbsp;&nbsp;辞官拜师</h2>
+<hr/>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;颜真卿二十六岁那年参加了科举考试，考中了进士。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;两年以后，他在朝廷里做了校书郎(负责写碑文、祭文的官)。后来朝廷又让他到礼泉县(在现在陕西省)去当专门管理地方治安的县尉。县衙里公事很多，可颜真卿还是不忘练字。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yan1.jpg') }}" width="600px" />
+  <pre><ins>颜真卿-自书告身帖</ins></pre>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;虽然大家都夸赞他的字写得很有功夫，他却想，俗话说"山外有山，天外有天"，自己写字的功夫还不到家，还要拜高明的人为师才行。不久，他就辞去了官职，拿着自己写的一些字，赶到洛阳去拜大书法家张旭为师。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;张旭听颜真卿说完来意，仔细地看了颜真卿写的字以后对他说："你的字写得已经很不错了。现在，国家正是用人的时候，你是国家未来的栋梁，哪能在写字上花那么多功夫呢?你只要勤练，字就能有长进，就不必拜我为师了。"听了张旭的这番话，颜真卿觉得有道理，见张旭执意不肯收自己做学生，就告辞回长安了。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;颜真卿回家以后又在朝廷里做了官，可他心里总放心不下向张旭学书法的事。过了不久，他又一次辞去官职，来洛阳找张旭。张旭见颜真卿第二次辞官学书法，被他的一片诚心感动，就高兴地收下了这个徒弟。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yan2.jpg') }}" width="600px" />
+  <pre><ins>颜真卿书法作品</ins></pre>
+</div>
+
+<h2>&nbsp;&nbsp;&nbsp;随处纸笔</h2>
+<hr/>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;颜真卿的外祖父是位书画家，母亲也是个知书达理的人。他们见颜真卿很聪明，就教他读书写字。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;颜真卿练起字来很专心，一笔一划从不马虎，一写就是大半天。母亲见儿子练字这样用心，心里又是喜又是愁。喜的是儿子将来一定会有出息;愁的是家境不宽裕，哪有余钱买纸供他练字呢?颜真卿很懂事，见母亲为没钱买纸的事犯愁，就悄悄地自己琢磨开了。</p>
+<div align="center">
+  <img src="{{ url_for('static',filename='image/yan3.jpg') }}"/>
+  <pre><ins>颜真卿书法</ins></pre>
+</div>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;一天，颜真卿高兴地对母亲说："我有不花钱的纸笔了，您别发愁了!""傻孩子，纸笔哪有不花钱的呢?""您瞧，这不是吗?"颜真卿手里举着一只碗和一把刷子，欢快地说，"这只碗是砚，这把刷子当笔，碗里的黄泥浆就是墨!""那 纸在哪儿呢?"母亲又问。颜真卿用手指了指墙壁，认真地说："这就是纸。不信，我写给您看!"说完，他拿起刷子，在碗里蘸满了泥浆，走到墙壁前挥笔写了起来。等到墙上写满了字，他又用清水把字迹冲洗掉，然后又重新写起来。看到儿子有了不花钱练字的好法子，母亲高兴地笑了。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;由于颜真卿刻苦好学长大以后，他不但练就了一手好字，而且也成了一个博学多才的青年人。</p>
+
+</div>
+{% endblock %}

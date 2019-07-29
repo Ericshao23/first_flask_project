@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% block title %}
+宋元历史
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgsongyuan.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 120px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:120px;
+   			height: 50px;
+  		}
+     .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:585px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:left;
+    }
+{% endblock %}
+{% block body %}
+    <div>
+        <ul id="ul2">
+            <li id="li2"><a href="{{ url_for('qinhan') }}">先秦两汉</a></li>
+            <li id="li2"><a href="{{ url_for('weijin') }}">魏晋南北朝</a></li>
+            <li id="li2"><a href="{{ url_for('suitang') }}">隋唐五代</a></li>
+            <li id="li2"><a href="{{ url_for('songyuan') }}">宋元明清</a></li>
+        </ul>
+    </div>
+    <div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宋元明清</h1>
+<hr/>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明朝</h1>
+	<hr>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;洪武二年（1369年），朱元璋改奉元路为西安府，并在唐长安城皇城的基础上，修建了西安城墙，留存至今，是中国现存最完整的一座古代城垣建筑。</p>
+	<p style="background-color:#D3D3D3"><blockquote>“据百二河山之险，可以耸诸侯之望，举天下形胜所在，莫如关中”<br/>
+     ——明·胡子祺</blockquote></p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;明朝建国之后，朱元璋一直心怀迁都之意，他和太子朱标最钟意的迁都之选正是长安。</p>
+	<div align="center">
+	<img src="{{ url_for('static',filename='image/songyuan1.jpg') }}" >
+	<pre><ins>钟鼓楼</ins></pre>
+	</div>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;但懿文太子早逝，燕王朱棣篡权迁都北平，长安，也就失去了宝贵的重新成为中国国都的机会。</p>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清朝</h1>
+	<hr>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;1900年，清廷利用义和团排外，并向十一国宣战，引发八国联军攻入北京，慈禧太后与光绪帝离开北京，西狩长安，留驻长安约一年之久。</p>
+	<div align="center">
+	<img src="{{ url_for('static',filename='image/songyuan2.jpg') }}" >
+	<pre><ins>八水绕长安</ins></pre>
+	</div>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;在此前后，光绪帝与国内维新派人士都强烈主张放弃北京，迁都长安，变法强国，以与西方列强抗战到底。</p>
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;近现代</h1>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;1936年（民国25年）蒋介石至西安督战时，张学良与杨虎城发动西安事变，软禁蒋介石并逼迫蒋与共产党合作抗日，最后促成国共暂时停止内战，共同抗日。</p>
+	<div align="center">
+	<img src="{{ url_for('static',filename='image/songyuan3.jpg') }}" width="585px" >
+	<pre><ins>张、杨两位将军在西安合照</ins></pre>
+	</div>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;长安是今之西安市，是西部地区重要的金融、商贸中心和交通、信息枢纽，地处中国中西部两大经济区域的结合部，是通往西南、中原、华东和华北各地区的门户和交通枢纽。<br>
+&nbsp;&nbsp;&nbsp;&nbsp;西安不仅是世界著名的历史文化名城，也是中西部地区重要的科研、高等教育、国防科技工业和高新技术产业基地。1992年7月国务院批准为内陆开放城市，是新亚欧大陆桥中国段陇海兰新线上最大的中心城市。现辖11区3县，总面积10108平方公里，常住人口843.49万人。</p>
+	<div align="center">
+	<img src="{{ url_for('static',filename='image/songyuan4.jpg') }}" >
+	<pre><ins>现代长安</ins></pre>
+	</div>
+
+</div>
+{% endblock %}

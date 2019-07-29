@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block title %}
+秋景
+{% endblock %}
+{% block style %}
+	body{
+            background-image: url({{ url_for('static',filename="image/bgautumn.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+     .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:center;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('spring') }}">春为青阳</a></li>
+					<li id="li2"><a href="{{ url_for('summer') }}">夏为朱明</a></li>
+					<li id="li2"><a href="{{url_for('autumn') }}">秋为白藏</a></li>
+					<li id="li2"><a href="{{ url_for('winter') }}">冬为玄英</a></li>
+				</ul>
+			</div>
+
+<div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秋</h1>
+<hr/>
+					<h3>不第后赋菊</h3>
+					<h4>黄巢</h4>
+					<p>
+					待到秋来九月八，我花开后百花杀。<br>
+					冲天香阵透长安，满城尽带黄金甲。
+					</p>
+					<img src="{{ url_for('static',filename='image/autumn1.jpg') }}" width="600px">
+					<br><br><br><br><br>
+					<h3>沁园春</h3>
+					<h4>毛泽东</h4>
+					<p>
+					独立寒秋，湘江北去，<br>
+					橘子洲头。 <br>
+					看万山红遍，层林尽染；<br>
+					漫江碧透，百舸争流。 <br>
+					鹰击长空，鱼翔浅底，<br>
+					万类霜天竞自由。<br>
+					怅寥廓，问苍茫大地，<br>
+					谁主沉浮？<br>
+					携来百侣曾游，<br>
+					忆往昔峥嵘岁月稠。<br>
+					恰同学少年，风华正茂；<br>
+					书生意气，挥斥方遒。<br>
+					指点江山，激扬文字，<br>
+					粪土当年万户侯。<br>
+					曾记否，<br>
+					到中流击水，<br>
+					浪遏飞舟？<br>
+					</p>
+					<img src="{{ url_for('static',filename='image/autumn2.jpg') }}" width="600px">
+					<br><br><br><br><br>
+					<h3>咏秋江</h3>
+					<h4>林逋</h4>
+					<p>
+					苍茫沙嘴鹭鸶眠，片水无痕浸碧天。<br>
+					最爱芦花经雨后，一蓬烟火饭鱼船。<br>
+					</p>
+					<img src="{{ url_for('static',filename='image/autumn3.jpg') }}" width="600px">
+					<br><br><br><br><br>
+					<h3>望阙台</h3>
+					<h4>
+						<p>
+					作者：戚继光 (明)<br>
+					十年驱驰海色寒，孤臣于此望宸銮。<br>
+					繁霜尽是心头血，洒向千峰秋叶丹。<br>
+
+					</p>
+					<img src="{{ url_for('static',filename='image/autumn4.jpg') }}" width="600px">
+					<br><br><br><br><br>
+					<h3>行香子</h3>
+					<h4>
+						<p>
+					作者：李清照 (宋)<br>
+					天与秋光，转转情伤，探金英知近重阳。<br>
+					薄衣初试,绿蚁新尝，渐一番风，一番雨，一番凉。<br>
+					黄昏院落，凄凄惶惶，酒醒时往事愁肠。<br>
+					那堪永夜，明月空床。<br>
+					闻砧声捣，蛩声细，漏声长。<br>
+					</p>
+					<img src="{{ url_for('static',filename='image/autumn5.jpg') }}" width="600px">
+
+{% endblock %}

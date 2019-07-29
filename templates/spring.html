@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block title %}
+春日景色
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgspring.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	  #li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+    .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	  }
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:center;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('spring') }}">春为青阳</a></li>
+					<li id="li2"><a href="{{ url_for('summer') }}">夏为朱明</a></li>
+					<li id="li2"><a href="{{url_for('autumn') }}">秋为白藏</a></li>
+					<li id="li2"><a href="{{ url_for('winter') }}">冬为玄英</a></li>
+				</ul>
+			</div>
+    <div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;春</h1>
+<hr/>
+<h3>登科后 </h3>
+<h4>孟郊</h4>
+<p>昔日龌龊不足夸，今朝放荡思无涯。</p>
+<p>春风得意马蹄疾，一日看尽长安花。</p>
+<img src="{{ url_for('static',filename='image/spring1.jpg') }}" width="600px"/>
+<h3>落地长安</h3>
+<h4>常建</h4>
+<p>家园好在尚留秦，耻作明时失路人。</p>
+<p>恐逢故里莺花笑，且向长安度一春。</p>
+<img src="{{ url_for('static',filename='image/spring2.jpg') }}" width="600px"/>
+<h3>长安春日</h3>
+<h4>薛能</h4>
+<p>穷途日日困泥沙，上苑年年好物华</p>
+<p>荆棘不当车马道，管弦长奏绮罗家。</p>
+<p>王孙草上悠扬蝶，少女风前烂熳花。</p>
+<p>懒出任从游子笑，入门还是旧生涯。</p>
+<img src="{{ url_for('static',filename='image/spring3.jpg') }}" width="600px"/>
+<h3>为谁哀</h3>
+<h4>杜甫</h4>
+<p>少陵野老吞声哭，春日潜行曲江曲。</p>
+<p>江头宫殿锁千门，细柳新蒲为谁绿？</p>
+<p>忆昔霓旌下南苑，苑中万物生颜色。</p>
+<p>昭阳殿里第一人，同辇随君侍君侧。</p>
+<p>辇前才人带弓箭，白马嚼啮黄金勒。</p>
+<p>翻身向天仰射云，一笑正坠双飞翼。</p>
+<p>明眸皓齿今何在？血污游魂归不得。</p>
+<p>清渭东流剑阁深，去住彼此无消息。</p>
+<p>人生有情泪沾臆，江水江花岂终极！</p>
+<p>黄昏胡骑尘满城，欲往城南望城北。</p>
+<img src="{{ url_for('static',filename='image/spring4.jpg') }}" width="600px"/>
+<h3>长安古意</h3>
+<h4>卢照邻</h4>
+<p>长安大道连狭斜，青牛白马七香车。</p>
+<p>玉辇纵横过主第，金鞭络绎向侯家。</p>
+<p>龙衔宝盖承朝日，凤吐流苏带晚霞。</p>
+<p>百尺游丝争绕树，一群娇鸟共啼花。</p>
+<p>游蜂戏蝶千门侧，碧树银台万种色。</p>
+<p>复道交窗作合欢，双阙连甍垂凤翼。</p>
+<p>梁家画阁中天起，汉帝金茎云外直。</p>
+<p>楼前相望不相知，陌上相逢讵相识？</p>
+<p>借问吹箫向紫烟，曾经学舞度芳年。</p>
+<p>得成比目何辞死，愿作鸳鸯不羡仙。</p>
+<p>比目鸳鸯真可羡，双去双来君不见？</p>
+<p>生憎帐额绣孤鸾，好取门帘帖双燕。</p>
+<img src="{{ url_for('static',filename='image/spring5.jpg') }}" width="600px"/>
+
+</div>
+{% endblock %}

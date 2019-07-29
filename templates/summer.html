@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% block title %}
+夏日景色
+{% endblock %}
+{% block style %}
+body{
+            background-image: url({{ url_for("static",filename="image/bgsummer.jpg") }});
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-attachment: fixed;
+        }
+
+    #ul1 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: #333;
+		}
+    #ul2 {
+    		list-style-type: none;
+    		position: fixed;
+    		top: 150px;
+    		left: 220px;
+    		width: 110px;
+   			margin: 0;
+    		padding: 0;
+    		overflow: hidden;
+    		background-color: rgba(150,200,255,0.7);
+		}
+	#li1 {
+    		float: left;
+	    }
+    #li2{
+
+   			text-align:center;
+   			list-style-type:none;
+   			width:110px;
+   			height: 50px;
+  		}
+     .div{
+   			margin:0 auto;
+   			margin-top:150px;
+  		 	width:600px;
+  		 	border:black solid 1px;
+   			background-color: rgba(255,255,255,0.7);
+	}
+
+
+    h3{
+    	text-align:center;
+    }
+    h4{
+    	text-align:center;
+    }
+    p{
+    	font-family: Monospace;
+    	text-align:center;
+    }
+{% endblock %}
+{% block body %}
+<div>
+				<ul id="ul2">
+					<li id="li2"><a href="{{ url_for('spring') }}">春为青阳</a></li>
+					<li id="li2"><a href="{{ url_for('summer') }}">夏为朱明</a></li>
+					<li id="li2"><a href="{{url_for('autumn') }}">秋为白藏</a></li>
+					<li id="li2"><a href="{{ url_for('winter') }}">冬为玄英</a></li>
+				</ul>
+			</div>
+    <div class="div">
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;夏</h1>
+<hr/>
+<h3>丽人行</h3>
+<h4>杜甫</h4>
+<p>三月三日天气新，长安水边多丽人。</p>
+<p>态浓意远淑且真，肌理细腻骨肉匀。</p>
+<p>绣罗衣裳照暮春，蹙金孔雀银麒麟。</p>
+<p>头上何所有？翠为荷叶垂鬓唇。</p>
+<p>背后何所见？珠压腰际稳称身。</p>
+<p>就中云幕椒房亲，赐名大国虢与秦。</p>
+<p>紫驼之峰出翠釜，水精之盘行素鳞。</p>
+<p>犀箸厌饫久未下，鸾刀缕切空纷纶。</p>
+<img src="{{ url_for('static',filename='image/summer1.jpg') }}" width="600px" height="350px"/>
+<h3>秦中初霁献给事二首</h3>
+<h4>储光羲</h4>
+<p>渭水收暮雨，处处多新泽。宫苑傍山明，云林带天碧。</p>
+<p>君子耸高驾，英声邈今昔。锵佩出中台，彯缨入仙掖。</p>
+<p>夙心幸清鉴，晚志欣良觌。鸣盗非足征，愿言同下客。</p>
+<p>南国久为思，西都尝作宾。云开天地色，日照山河春。</p>
+<p>善听在知己，扬光唯达人。妙年弄柔翰，弱冠偶良晨。</p>
+<p>擢第文昌阁，还家沧海滨。寸心何所望，东掖有贤臣。</p>
+<img src="{{ url_for('static',filename='image/summer2.jpg') }}" width="600px" height="350px"/>
+<h3>登金陵凤凰台 </h3>
+<h4>李白</h4>
+<p>上凤凰游，凤去台空江自流。</p>
+<p>草埋幽径，晋代衣冠成古丘。</p>
+<p>落青天外，二水中分白鹭洲。</p>
+<p>云能蔽日，长安不见使人愁。</p>
+<img src="{{ url_for('static',filename='image/summer3.jpg') }}" width="600px" height="350px"/>
+<h3>渔家傲•暖日迟迟花袅袅</h3>
+<h4>欧阳修</h4>
+<p>迟花袅袅。人将红粉争花好。</p>
+<p>言惟解笑。金壶倒。花开未老人年少。</p>
+<p>门来扰扰。行人莫羡长安道。</p>
+<p>声衢鼓报。催昏晓。长安城里人先老。</p>
+<img src="{{ url_for('static',filename='image/summer4.jpg') }}" width="600px" height="350px"/>
+<h3>少年游•长安古道马迟迟</h3>
+<h4>柳永</h4>
+<p>长安古道马迟迟，高柳乱蝉嘶。</p>
+<p>夕阳鸟外，秋风原上，目断四天垂。</p>
+<p>归云一去无踪迹，何处是前期？</p>
+<p>狎兴生疏，酒徒萧索，不似少年时。</p>
+<img src="{{ url_for('static',filename='image/summer5.jpg') }}" width="600px" height="900px"/>
+    </div>
+{% endblock %}
